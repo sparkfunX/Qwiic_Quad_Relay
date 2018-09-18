@@ -10608,46 +10608,23 @@ Standard LM317 adjustable voltage regulator. AOI (Adjust Output Input). Google '
 <sheets>
 <sheet>
 <plain>
-<text x="2.54" y="116.84" size="1.27" layer="97" font="vector">The board is designed for a 15*C temperature 
-rise Allowing for a continous current draw of 
-5.5A. The relay can handle 10 A at 110VAC 
-for short pulses (under 20 seconds).</text>
 <text x="167.64" y="7.62" size="2.54" layer="94" font="vector">Elias Santistevan</text>
 <text x="238.76" y="7.62" size="2.54" layer="94" font="vector">x01</text>
-<text x="220.98" y="58.42" size="1.27" layer="91" font="vector">delay:
-10ms for relay and
-5ns for Opto-isolator</text>
-<wire x1="73.66" y1="119.38" x2="162.56" y2="119.38" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="162.56" y1="119.38" x2="248.92" y2="119.38" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="73.66" y1="119.38" x2="73.66" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="73.66" y1="78.74" x2="73.66" y2="30.48" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="73.66" y1="30.48" x2="73.66" y2="0" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="0" y1="30.48" x2="73.66" y2="30.48" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="162.56" y1="35.56" x2="162.56" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="119.38" x2="165.1" y2="119.38" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="165.1" y1="119.38" x2="248.92" y2="119.38" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="119.38" x2="71.12" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="78.74" x2="71.12" y2="38.1" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="38.1" x2="71.12" y2="0" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="0" y1="38.1" x2="71.12" y2="38.1" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="165.1" y1="35.56" x2="165.1" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
 <text x="2.54" y="180.34" size="2.54" layer="94" font="vector">Relay Control</text>
-<text x="76.2" y="73.66" size="2.54" layer="94" font="vector">Connectors</text>
+<text x="73.66" y="73.66" size="2.54" layer="94" font="vector">Connectors</text>
 <text x="167.64" y="114.3" size="2.54" layer="94" font="vector">ATtiny84</text>
 <text x="2.54" y="25.4" size="2.54" layer="94" font="vector">Programming Header</text>
-<text x="40.64" y="43.18" size="1.778" layer="91">213t</text>
-<text x="1.778" y="95.504" size="1.778" layer="91" font="vector">w/330 Ohm: 
-All ON: 1.6V dropout ~5mA
-Single: .4V dropout ~8mA
-w/220 Ohm
-13mA
-7mA</text>
-<wire x1="162.56" y1="78.74" x2="162.56" y2="119.38" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="38.1" y1="104.14" x2="55.88" y2="104.14" width="0.1524" layer="97" style="shortdash"/>
-<wire x1="55.88" y1="104.14" x2="55.88" y2="127" width="0.1524" layer="97" style="shortdash"/>
-<text x="43.18" y="129.54" size="1.778" layer="91" font="vector">205mA - 208mA 
-going to Relay -
-133mA Coil Current</text>
-<text x="2.54" y="71.12" size="1.27" layer="91" font="vector">10mA - really close to actual IR on current
-maybe change to 220?</text>
-<wire x1="25.4" y1="76.2" x2="25.4" y2="81.28" width="0.1524" layer="97" style="shortdash"/>
-<text x="170.18" y="86.36" size="1.778" layer="91" font="vector">??</text>
-<wire x1="73.66" y1="78.74" x2="147.32" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
-<wire x1="147.32" y1="78.74" x2="162.56" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
-<text x="78.74" y="114.3" size="2.54" layer="94" font="vector">Power</text>
+<wire x1="165.1" y1="78.74" x2="165.1" y2="119.38" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="71.12" y1="78.74" x2="147.32" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="147.32" y1="78.74" x2="165.1" y2="78.74" width="0.2032" layer="97" style="shortdash"/>
+<text x="73.66" y="114.3" size="2.54" layer="94" font="vector">Power</text>
 </plain>
 <instances>
 <instance part="K1" gate="K$1" x="40.64" y="152.4"/>
@@ -10657,7 +10634,7 @@ maybe change to 220?</text>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
 <instance part="GND1" gate="1" x="27.94" y="127"/>
-<instance part="GND2" gate="1" x="33.02" y="45.72"/>
+<instance part="GND2" gate="1" x="35.56" y="53.34"/>
 <instance part="GND3" gate="1" x="180.34" y="60.96"/>
 <instance part="J2" gate="G$1" x="101.6" y="55.88" smashed="yes" rot="MR0">
 <attribute name="NAME" x="106.68" y="63.754" size="1.778" layer="95" font="vector" rot="MR0"/>
@@ -10668,7 +10645,7 @@ maybe change to 220?</text>
 <instance part="R4" gate="G$1" x="17.78" y="152.4" rot="R90"/>
 <instance part="GND5" gate="1" x="175.26" y="81.28"/>
 <instance part="C1" gate="G$1" x="175.26" y="88.9"/>
-<instance part="R5" gate="G$1" x="50.8" y="99.06" rot="R90"/>
+<instance part="R5" gate="G$1" x="53.34" y="106.68" rot="R90"/>
 <instance part="J3" gate="G$1" x="101.6" y="33.02" smashed="yes" rot="MR0">
 <attribute name="NAME" x="106.68" y="40.894" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
@@ -10695,15 +10672,15 @@ maybe change to 220?</text>
 <instance part="JP9" gate="G$1" x="238.76" y="27.94"/>
 <instance part="GND8" gate="1" x="91.44" y="5.08"/>
 <instance part="J1" gate="G$1" x="99.06" y="15.24" rot="R180"/>
-<instance part="U3" gate="G$1" x="43.18" y="53.34" smashed="yes">
-<attribute name="NAME" x="38.1" y="61.214" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="15.24" y="65.786" size="1.778" layer="96" font="vector" align="top-left"/>
+<instance part="U3" gate="G$1" x="45.72" y="60.96" smashed="yes">
+<attribute name="NAME" x="40.64" y="68.834" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="12.7" y="73.406" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="U2" gate="G$1" x="43.18" y="86.36" smashed="yes">
-<attribute name="NAME" x="38.1" y="94.234" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="10.16" y="98.806" size="1.778" layer="96" font="vector" align="top-left"/>
+<instance part="U2" gate="G$1" x="45.72" y="93.98" smashed="yes">
+<attribute name="NAME" x="40.64" y="101.854" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="12.7" y="106.426" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="GND9" gate="1" x="33.02" y="78.74"/>
+<instance part="GND9" gate="1" x="35.56" y="86.36"/>
 <instance part="U5" gate="U1" x="200.66" y="81.28"/>
 <instance part="K2" gate="K$1" x="104.14" y="152.4"/>
 <instance part="K3" gate="K$1" x="167.64" y="152.4"/>
@@ -10711,10 +10688,16 @@ maybe change to 220?</text>
 <instance part="Q1" gate="G$1" x="213.36" y="137.16"/>
 <instance part="Q2" gate="G$1" x="152.4" y="137.16"/>
 <instance part="Q3" gate="G$1" x="88.9" y="137.16"/>
-<instance part="R2" gate="G$1" x="25.4" y="91.44" rot="R180"/>
-<instance part="R3" gate="G$1" x="25.4" y="86.36" rot="R180"/>
-<instance part="R10" gate="G$1" x="25.4" y="58.42" rot="R180"/>
-<instance part="R11" gate="G$1" x="25.4" y="53.34" rot="R180"/>
+<instance part="R2" gate="G$1" x="27.94" y="99.06" smashed="yes" rot="R180">
+<attribute name="NAME" x="25.654" y="102.362" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
+<attribute name="VALUE" x="30.48" y="100.584" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
+</instance>
+<instance part="R3" gate="G$1" x="27.94" y="93.98" rot="R180"/>
+<instance part="R10" gate="G$1" x="27.94" y="66.04" smashed="yes" rot="R180">
+<attribute name="NAME" x="24.638" y="69.596" size="1.778" layer="95" font="vector" rot="R180" align="bottom-center"/>
+<attribute name="VALUE" x="30.734" y="67.818" size="1.778" layer="96" font="vector" rot="R180" align="top-center"/>
+</instance>
+<instance part="R11" gate="G$1" x="27.94" y="60.96" rot="R180"/>
 <instance part="D4" gate="G$1" x="154.94" y="152.4" smashed="yes" rot="R90">
 <attribute name="NAME" x="152.908" y="149.86" size="1.778" layer="95" font="vector" rot="R90"/>
 </instance>
@@ -10730,11 +10713,11 @@ maybe change to 220?</text>
 <instance part="R12" gate="G$1" x="91.44" y="165.1" rot="R90"/>
 <instance part="R13" gate="G$1" x="154.94" y="165.1" rot="R90"/>
 <instance part="R14" gate="G$1" x="215.9" y="165.1" rot="R90"/>
-<instance part="D7" gate="G$1" x="78.74" y="165.1"/>
-<instance part="D8" gate="G$1" x="142.24" y="165.1"/>
+<instance part="D7" gate="G$1" x="81.28" y="165.1"/>
+<instance part="D8" gate="G$1" x="144.78" y="165.1"/>
 <instance part="D9" gate="G$1" x="205.74" y="167.64"/>
-<instance part="R15" gate="G$1" x="78.74" y="152.4" rot="R90"/>
-<instance part="R16" gate="G$1" x="142.24" y="152.4" rot="R90"/>
+<instance part="R15" gate="G$1" x="81.28" y="152.4" rot="R90"/>
+<instance part="R16" gate="G$1" x="144.78" y="152.4" rot="R90"/>
 <instance part="R17" gate="G$1" x="205.74" y="154.94" rot="R90"/>
 <instance part="J6" gate="J$1" x="132.08" y="43.18" rot="R180"/>
 <instance part="J7" gate="J$1" x="132.08" y="30.48" rot="R180"/>
@@ -10743,15 +10726,15 @@ maybe change to 220?</text>
 <instance part="SUPPLY5" gate="G$1" x="175.26" y="99.06"/>
 <instance part="SUPPLY1" gate="G$1" x="220.98" y="111.76"/>
 <instance part="SUPPLY2" gate="G$1" x="241.3" y="106.68"/>
-<instance part="SUPPLY3" gate="G$1" x="78.74" y="172.72"/>
+<instance part="SUPPLY3" gate="G$1" x="81.28" y="172.72"/>
 <instance part="SUPPLY4" gate="G$1" x="91.44" y="172.72"/>
-<instance part="SUPPLY8" gate="G$1" x="142.24" y="172.72"/>
+<instance part="SUPPLY8" gate="G$1" x="144.78" y="172.72"/>
 <instance part="SUPPLY9" gate="G$1" x="154.94" y="172.72"/>
 <instance part="SUPPLY10" gate="G$1" x="205.74" y="172.72"/>
 <instance part="SUPPLY11" gate="G$1" x="215.9" y="172.72"/>
 <instance part="SUPPLY13" gate="G$1" x="17.78" y="172.72"/>
 <instance part="SUPPLY14" gate="G$1" x="27.94" y="172.72"/>
-<instance part="SUPPLY15" gate="G$1" x="50.8" y="106.68"/>
+<instance part="SUPPLY15" gate="G$1" x="53.34" y="114.3"/>
 <instance part="J9" gate="G$1" x="88.9" y="96.52"/>
 <instance part="U1" gate="G$1" x="111.76" y="104.14" smashed="yes">
 <attribute name="NAME" x="114.3" y="96.52" size="1.778" layer="95"/>
@@ -10862,21 +10845,21 @@ maybe change to 220?</text>
 <segment>
 <pinref part="U3" gate="G$1" pin="C2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="35.56" y1="50.8" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="50.8" x2="33.02" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="58.42" x2="35.56" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="C1"/>
-<wire x1="35.56" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="55.88" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
-<junction x="33.02" y="50.8"/>
+<wire x1="38.1" y1="63.5" x2="35.56" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="63.5" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
+<junction x="35.56" y="58.42"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="C1"/>
-<wire x1="35.56" y1="88.9" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="88.9" x2="33.02" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="96.52" x2="35.56" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="96.52" x2="35.56" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="C2"/>
-<wire x1="33.02" y1="83.82" x2="33.02" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="83.82" x2="33.02" y2="83.82" width="0.1524" layer="91"/>
-<junction x="33.02" y="83.82"/>
+<wire x1="35.56" y1="91.44" x2="35.56" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="91.44" x2="35.56" y2="91.44" width="0.1524" layer="91"/>
+<junction x="35.56" y="91.44"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -11061,14 +11044,14 @@ maybe change to 220?</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="A2"/>
-<wire x1="35.56" y1="53.34" x2="30.48" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="A1"/>
-<wire x1="30.48" y1="58.42" x2="35.56" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="66.04" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R10" gate="G$1" pin="1"/>
 </segment>
 </net>
@@ -11076,42 +11059,42 @@ maybe change to 220?</text>
 <segment>
 <pinref part="U3" gate="G$1" pin="CL1"/>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="48.26" y1="58.42" x2="50.8" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="58.42" x2="50.8" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="66.04" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="66.04" x2="53.34" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="CL2"/>
-<wire x1="50.8" y1="83.82" x2="50.8" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="86.36" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="91.44" x2="50.8" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="53.34" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="50.8" y1="53.34" x2="50.8" y2="58.42" width="0.1524" layer="91"/>
-<junction x="50.8" y="58.42"/>
+<wire x1="53.34" y1="91.44" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="93.98" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="99.06" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="60.96" x2="53.34" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="60.96" x2="53.34" y2="66.04" width="0.1524" layer="91"/>
+<junction x="53.34" y="66.04"/>
 <pinref part="U2" gate="G$1" pin="CL1"/>
-<wire x1="48.26" y1="91.44" x2="50.8" y2="91.44" width="0.1524" layer="91"/>
-<junction x="50.8" y="91.44"/>
+<wire x1="50.8" y1="99.06" x2="53.34" y2="99.06" width="0.1524" layer="91"/>
+<junction x="53.34" y="99.06"/>
 <pinref part="U2" gate="G$1" pin="CL2"/>
-<wire x1="48.26" y1="86.36" x2="50.8" y2="86.36" width="0.1524" layer="91"/>
-<junction x="50.8" y="86.36"/>
+<wire x1="50.8" y1="93.98" x2="53.34" y2="93.98" width="0.1524" layer="91"/>
+<junction x="53.34" y="93.98"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="A1"/>
-<wire x1="30.48" y1="91.44" x2="35.56" y2="91.44" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="33.02" y1="99.06" x2="38.1" y2="99.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="A2"/>
-<wire x1="30.48" y1="86.36" x2="35.56" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="93.98" x2="38.1" y2="93.98" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="RELAY_CTRL1" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="17.78" y1="91.44" x2="20.32" y2="91.44" width="0.1524" layer="91"/>
-<label x="17.78" y="91.44" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="20.32" y1="99.06" x2="22.86" y2="99.06" width="0.1524" layer="91"/>
+<label x="20.32" y="99.06" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U5" gate="U1" pin="(A3)3"/>
@@ -11122,8 +11105,8 @@ maybe change to 220?</text>
 <net name="RELAY_CTRL2" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="20.32" y1="86.36" x2="17.78" y2="86.36" width="0.1524" layer="91"/>
-<label x="17.78" y="86.36" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="22.86" y1="93.98" x2="20.32" y2="93.98" width="0.1524" layer="91"/>
+<label x="20.32" y="93.98" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U5" gate="U1" pin="(A2)2"/>
@@ -11134,8 +11117,8 @@ maybe change to 220?</text>
 <net name="RELAY_CTRL3" class="0">
 <segment>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="20.32" y1="58.42" x2="17.78" y2="58.42" width="0.1524" layer="91"/>
-<label x="17.78" y="58.42" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="22.86" y1="66.04" x2="20.32" y2="66.04" width="0.1524" layer="91"/>
+<label x="20.32" y="66.04" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U5" gate="U1" pin="(A1)1"/>
@@ -11146,8 +11129,8 @@ maybe change to 220?</text>
 <net name="RELAY_CTRL4" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="20.32" y1="53.34" x2="17.78" y2="53.34" width="0.1524" layer="91"/>
-<label x="17.78" y="53.34" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="22.86" y1="60.96" x2="20.32" y2="60.96" width="0.1524" layer="91"/>
+<label x="20.32" y="60.96" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U5" gate="U1" pin="(A0)0"/>
@@ -11177,8 +11160,8 @@ maybe change to 220?</text>
 <wire x1="93.98" y1="147.32" x2="91.44" y2="147.32" width="0.1524" layer="91"/>
 <junction x="91.44" y="147.32"/>
 <pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="78.74" y1="147.32" x2="78.74" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="144.78" x2="91.44" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="147.32" x2="81.28" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="144.78" x2="91.44" y2="144.78" width="0.1524" layer="91"/>
 <junction x="91.44" y="144.78"/>
 </segment>
 </net>
@@ -11204,8 +11187,8 @@ maybe change to 220?</text>
 <junction x="154.94" y="147.32"/>
 <pinref part="R16" gate="G$1" pin="1"/>
 <wire x1="154.94" y1="144.78" x2="154.94" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="147.32" x2="142.24" y2="144.78" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="144.78" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="147.32" x2="144.78" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="144.78" x2="154.94" y2="144.78" width="0.1524" layer="91"/>
 <junction x="154.94" y="144.78"/>
 </segment>
 </net>
@@ -11247,14 +11230,14 @@ maybe change to 220?</text>
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
 <pinref part="D8" gate="G$1" pin="C"/>
-<wire x1="142.24" y1="157.48" x2="142.24" y2="160.02" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="157.48" x2="144.78" y2="160.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$22" class="0">
 <segment>
 <pinref part="D7" gate="G$1" pin="C"/>
 <pinref part="R15" gate="G$1" pin="2"/>
-<wire x1="78.74" y1="160.02" x2="78.74" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="160.02" x2="81.28" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NO2" class="0">
@@ -11374,8 +11357,8 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="EM2"/>
-<wire x1="48.26" y1="50.8" x2="53.34" y2="50.8" width="0.1524" layer="91"/>
-<label x="53.34" y="50.8" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="50.8" y1="58.42" x2="55.88" y2="58.42" width="0.1524" layer="91"/>
+<label x="55.88" y="58.42" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="OPTO_2" class="0">
@@ -11386,8 +11369,8 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="EM1"/>
-<wire x1="48.26" y1="55.88" x2="53.34" y2="55.88" width="0.1524" layer="91"/>
-<label x="53.34" y="55.88" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="50.8" y1="63.5" x2="55.88" y2="63.5" width="0.1524" layer="91"/>
+<label x="55.88" y="63.5" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="OPTO_3" class="0">
@@ -11398,8 +11381,8 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="EM2"/>
-<wire x1="48.26" y1="83.82" x2="53.34" y2="83.82" width="0.1524" layer="91"/>
-<label x="53.34" y="83.82" size="1.27" layer="95" font="vector" xref="yes"/>
+<wire x1="50.8" y1="91.44" x2="55.88" y2="91.44" width="0.1524" layer="91"/>
+<label x="55.88" y="91.44" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="OPTO_4" class="0">
@@ -11410,17 +11393,8 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="EM1"/>
-<wire x1="48.26" y1="88.9" x2="53.34" y2="88.9" width="0.1524" layer="91"/>
-<label x="53.34" y="88.9" size="1.27" layer="95" font="vector" xref="yes"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<wire x1="167.64" y1="83.82" x2="182.88" y2="83.82" width="0.1524" layer="91" style="dashdot"/>
-<wire x1="182.88" y1="83.82" x2="182.88" y2="93.98" width="0.1524" layer="91" style="dashdot"/>
-<wire x1="182.88" y1="93.98" x2="167.64" y2="93.98" width="0.1524" layer="91" style="dashdot"/>
-<wire x1="167.64" y1="93.98" x2="167.64" y2="91.44" width="0.1524" layer="91" style="dashdot"/>
-<wire x1="167.64" y1="91.44" x2="167.64" y2="83.82" width="0.1524" layer="91" style="dashdot"/>
+<wire x1="50.8" y1="96.52" x2="55.88" y2="96.52" width="0.1524" layer="91"/>
+<label x="55.88" y="96.52" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -11451,7 +11425,7 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="D7" gate="G$1" pin="A"/>
-<wire x1="78.74" y1="167.64" x2="78.74" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="167.64" x2="81.28" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -11461,7 +11435,7 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="D8" gate="G$1" pin="A"/>
-<wire x1="142.24" y1="167.64" x2="142.24" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="167.64" x2="144.78" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="SUPPLY8" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -11491,7 +11465,7 @@ maybe change to 220?</text>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="106.68" x2="50.8" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="114.3" x2="53.34" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="SUPPLY15" gate="G$1" pin="5V"/>
 </segment>
 <segment>
@@ -11547,10 +11521,4 @@ maybe change to 220?</text>
 </sheets>
 </schematic>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
