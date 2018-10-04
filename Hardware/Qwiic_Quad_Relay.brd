@@ -29,7 +29,7 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
@@ -54,7 +54,7 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="13" fill="1" visible="yes" active="yes"/>
@@ -223,7 +223,7 @@
 <wire x1="69.85" y1="22.86" x2="69.85" y2="19.05" width="0.1524" layer="46"/>
 <wire x1="69.85" y1="19.05" x2="68.707" y2="19.05" width="0.1524" layer="46"/>
 <wire x1="65.913" y1="19.05" x2="64.77" y2="19.05" width="0.1524" layer="46"/>
-<text x="69.342" y="19.812" size="0.381" layer="20" font="vector" rot="R90">Route Out</text>
+<text x="69.342" y="19.812" size="0.381" layer="46" font="vector" rot="R90">Route Out</text>
 <dimension x1="24.13" y1="21.59" x2="25.273" y2="21.59" x3="24.7015" y3="18.161" textsize="0.508" textratio="15" layer="47" dtype="horizontal" unit="inch"/>
 <dimension x1="44.45" y1="21.463" x2="45.593" y2="21.463" x3="45.0215" y3="18.161" textsize="0.508" textratio="15" layer="47" dtype="horizontal" unit="inch"/>
 <dimension x1="64.77" y1="20.828" x2="65.913" y2="20.701" x3="65.3415" y3="18.034" textsize="0.508" textratio="15" layer="47" dtype="horizontal" unit="inch"/>
@@ -5092,8 +5092,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="PROD_ID" value="COMP-09533" x="10.16" y="19.05" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SF_SKU" value="COM-00100" x="10.16" y="19.05" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" package="0603" value="10" x="4.953" y="28.194">
-<attribute name="PROD_ID" value="RES-07871" x="4.953" y="28.194" size="1.778" layer="27" display="off"/>
+<element name="R1" library="SparkFun-Resistors" package="0603" value="100" x="4.953" y="28.194">
+<attribute name="PROD_ID" value="RES-07863" x="4.953" y="28.194" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R4" library="SparkFun-Resistors" package="0603" value="220" x="19.05" y="26.67">
 <attribute name="PROD_ID" value="RES-07861" x="19.05" y="26.67" size="1.778" layer="27" display="off"/>
@@ -5106,11 +5106,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="JP2" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="80.01" y="41.91" rot="MR0"/>
 <element name="JP6" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="5.08" y="2.54" rot="MR0"/>
 <element name="J4" library="SparkFun-Connectors" package="2X3_TEST_POINTS" value="AVR_SPI_PROG_3X2TESTPOINTS" x="31.115" y="37.973" rot="MR180"/>
-<element name="R8" library="SparkFun-Resistors" package="0603" value="10K" x="37.592" y="38.227" rot="R90">
-<attribute name="PROD_ID" value="RES-00818" x="37.592" y="38.227" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
+<element name="R8" library="SparkFun-Resistors" package="0603" value="10k" x="37.592" y="38.227" rot="R90">
+<attribute name="PROD_ID" value="RES-00824" x="37.592" y="38.227" size="1.778" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
 <element name="R9" library="SparkFun-Resistors" package="0603" value="1k" x="60.198" y="42.164">
-<attribute name="PROD_ID" value="RES-00818" x="60.198" y="42.164" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<attribute name="PROD_ID" value="RES-07856" x="60.198" y="42.164" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
 <element name="D3" library="SparkFun-LED" package="LED-0603" value="RED" x="60.071" y="44.069">
 <attribute name="PROD_ID" value="DIO-00819" x="60.071" y="44.069" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
@@ -5180,14 +5180,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="D6" library="SparkFun-DiscreteSemi" package="SOD-323" value="1A/23V/620mV" x="24.13" y="26.67">
 <attribute name="PROD_ID" value="DIO-11623" x="24.13" y="26.67" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R12" library="SparkFun-Resistors" package="0603" value="10" x="24.13" y="28.194">
-<attribute name="PROD_ID" value="RES-07871" x="24.13" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<element name="R12" library="SparkFun-Resistors" package="0603" value="100" x="24.13" y="28.194">
+<attribute name="PROD_ID" value="RES-07863" x="24.13" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R13" library="SparkFun-Resistors" package="0603" value="10" x="44.45" y="28.194">
-<attribute name="PROD_ID" value="RES-07871" x="44.45" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<element name="R13" library="SparkFun-Resistors" package="0603" value="100" x="44.45" y="28.194">
+<attribute name="PROD_ID" value="RES-07863" x="44.45" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R14" library="SparkFun-Resistors" package="0603" value="10" x="64.77" y="28.321">
-<attribute name="PROD_ID" value="RES-07871" x="64.77" y="28.321" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<element name="R14" library="SparkFun-Resistors" package="0603" value="100" x="64.77" y="28.321">
+<attribute name="PROD_ID" value="RES-07863" x="64.77" y="28.321" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
 <element name="D7" library="SparkFun-LED" package="LED-0603" value="BLUE" x="35.814" y="29.21" rot="R270">
 <attribute name="PROD_ID" value="DIO-08575" x="35.814" y="29.21" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
@@ -5222,7 +5222,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="J9" library="SparkFun-Connectors" package="POWER_JACK_PTH" value="POWER_JACK" x="70.612" y="50.038" rot="R180">
 <attribute name="PROD_ID" value="CONN-08197" x="70.612" y="50.038" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U1" library="SparkFun-IC-Power" package="SOT223" value="V_REG_317SMD" x="52.705" y="40.513"/>
+<element name="U1" library="SparkFun-IC-Power" package="SOT223" value="" x="52.705" y="40.513">
+<attribute name="PROD_ID" value="VREG-08170" x="52.705" y="40.513" size="1.778" layer="27" display="off"/>
+</element>
 <element name="R6" library="SparkFun-Resistors" package="0603" value="240" x="51.816" y="35.052">
 <attribute name="PROD_ID" value="RES-07849" x="51.816" y="35.052" size="1.778" layer="27" display="off"/>
 </element>
@@ -6041,6 +6043,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="56.896" y1="36.449" x2="53.4035" y2="39.9415" width="0.508" layer="16"/>
 <via x="53.4035" y="39.9415" extent="1-16" drill="0.508"/>
 <wire x1="5.803" y1="28.194" x2="5.803" y2="31.203" width="0.254" layer="1"/>
+<contactref element="U1" pad="4"/>
 </signal>
 <signal name="N$19">
 <contactref element="U1" pad="1"/>
