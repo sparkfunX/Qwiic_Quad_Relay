@@ -33,7 +33,7 @@
 #define RELAY_FOUR_TOGGLE 0x04
 #define TURN_ALL_OFF 0xA 
 #define TURN_ALL_ON 0xB 
-
+#define TOGGLE_ALL 0xC
 
 // Commands to request the state of the relay, whether it is currently on or
 // off. 
@@ -81,16 +81,16 @@ void loop(void) {
 
 void receiveEvent(int numberOfBytesReceived)
 {
-  while (Wire.available()) {
+  while( Wire.available() ) {
     //Record uint8_ts to local array
     COMMAND = Wire.read();
 
-    if (COMMAND == COMMAND_CHANGE_ADDRESS){ //Set new I2C address 
-      if (Wire.available()) {
+    if(COMMAND == COMMAND_CHANGE_ADDRESS){ //Set new I2C address 
+      if(Wire.available()) {
         setting_i2c_address = Wire.read();
 
         //Error check
-        if (setting_i2c_address < 0x08 || setting_i2c_address > 0x77)
+        if(setting_i2c_address < 0x08 || setting_i2c_address > 0x77)
           continue; //Command failed. This address is out of bounds.
 
         EEPROM.write(LOCATION_I2C_ADDRESS, setting_i2c_address);
@@ -102,12 +102,12 @@ void receiveEvent(int numberOfBytesReceived)
 
     // Relay control for relay 1, check the state, toggle the relay, change the
     // state.
-    else if (COMMAND == RELAY_ONE_TOGGLE){
-      if (status[0] == RELAY_IS_OFF){
+    else if(COMMAND == RELAY_ONE_TOGGLE){
+      if(status[0] == RELAY_IS_OFF){
         digitalWrite(relayCtrl1, HIGH); 
         status[0] = RELAY_IS_ON; 
       }
-      else if (status[0] == RELAY_IS_ON ){
+      else if(status[0] == RELAY_IS_ON ){
         digitalWrite(relayCtrl1, LOW); 
         status[0] = RELAY_IS_OFF; 
       }
@@ -115,12 +115,12 @@ void receiveEvent(int numberOfBytesReceived)
 
     // Relay control for relay 2, check the state, toggle the relay, change the
     // state.
-    else if (COMMAND == RELAY_TWO_TOGGLE){
-      if (status[1] == RELAY_IS_OFF){
+    else if(COMMAND == RELAY_TWO_TOGGLE){
+      if(status[1] == RELAY_IS_OFF){
         digitalWrite(relayCtrl2, HIGH); 
         status[1] = RELAY_IS_ON; 
       }
-      else if (status[1] == RELAY_IS_ON ){
+      else if(status[1] == RELAY_IS_ON ){
         digitalWrite(relayCtrl2, LOW); 
         status[1] = RELAY_IS_OFF; 
       }
@@ -128,12 +128,12 @@ void receiveEvent(int numberOfBytesReceived)
 
     // Relay control for relay 3, check the state, toggle the relay, change the
     // state.
-    else if (COMMAND == RELAY_THREE_TOGGLE){
-      if (status[2] == RELAY_IS_OFF){
+    else if(COMMAND == RELAY_THREE_TOGGLE){
+      if(status[2] == RELAY_IS_OFF){
         digitalWrite(relayCtrl3, HIGH); 
         status[2] = RELAY_IS_ON; 
       }
-      else if (status[2] == RELAY_IS_ON ){
+      else if(status[2] == RELAY_IS_ON ){
         digitalWrite(relayCtrl3, LOW); 
         status[2] = RELAY_IS_OFF; 
       }
@@ -141,19 +141,19 @@ void receiveEvent(int numberOfBytesReceived)
 
     // Relay control for relay 4, check the state, toggle the relay, change the
     // state.
-    else if (COMMAND == RELAY_FOUR_TOGGLE){
-      if (status[3] == RELAY_IS_OFF){
+    else if(COMMAND == RELAY_FOUR_TOGGLE){
+      if(status[3] == RELAY_IS_OFF){
         digitalWrite(relayCtrl4, HIGH); 
         status[3] = RELAY_IS_ON; 
       }
-      else if (status[3] == RELAY_IS_ON ){
+      else if(status[3] == RELAY_IS_ON ){
         digitalWrite(relayCtrl4, LOW); 
         status[3] = RELAY_IS_OFF; 
       }
     }
 
     // Turn all relays off, record all of their states. 
-    else if (COMMAND == TURN_ALL_OFF){
+    else if(COMMAND == TURN_ALL_OFF){
       digitalWrite(relayCtrl1, LOW); 
       digitalWrite(relayCtrl2, LOW); 
       digitalWrite(relayCtrl3, LOW); 
@@ -163,14 +163,34 @@ void receiveEvent(int numberOfBytesReceived)
       }
     }
 
-    //Turn it up to ELEVEN, all on! Record their states to the status array.
-    else if (COMMAND == TURN_ALL_ON){
+    // Turn it up to ELEVEN, all on! Record their states to the status array.
+    else if(COMMAND == TURN_ALL_ON){
       digitalWrite(relayCtrl1, HIGH); 
       digitalWrite(relayCtrl2, HIGH); 
       digitalWrite(relayCtrl3, HIGH); 
       digitalWrite(relayCtrl4, HIGH); 
       for(int i = 0; i < sizeof(status); i++){
         status[i] = RELAY_IS_ON;
+      }
+    }
+
+    // This command will put each relay into it's opposite state: relays that
+    // are on will be turned off and vice versa. 
+    else if(COMMAND == TOGGLE_ALL){
+      for(int i = 0; i < sizeof(status); i++){
+        if(status[i] == RELAY_IS_ON){
+          // Remember that the relays are on pins 0-4, which aligns with the
+          // status array. With that, I'll be using the iterator 'i' to write
+          // the pins HIGH and LOW. 
+          digitalWrite(i, LOW); 
+          status[i] = RELAY_IS_OFF;
+          continue; 
+        }
+        //Would be an else statement, but for clarity....
+        else if(status[i] == RELAY_IS_OFF){
+          digitalWrite(i, HIGH);
+          status[i] = RELAY_IS_ON;
+        }
       }
     }
 
@@ -208,7 +228,7 @@ void readSystemSettings(void)
 {
   //Read what I2C address we should use
   setting_i2c_address = EEPROM.read(LOCATION_I2C_ADDRESS);
-  if (setting_i2c_address == 255) {
+  if(setting_i2c_address == 255) {
     setting_i2c_address = I2C_ADDRESS_DEFAULT; //By default, we listen for I2C_ADDRESS_DEFAULT
     EEPROM.write(LOCATION_I2C_ADDRESS, setting_i2c_address);
   }
@@ -219,7 +239,7 @@ void startI2C()
 {
   Wire.end(); //Before we can change addresses we need to stop
   
-  if (digitalRead(addrPin) == HIGH) //Default is HIGH because the pin is not broken out
+  if(digitalRead(addrPin) == HIGH) //Default is HIGH because the pin is not broken out
     Wire.begin(setting_i2c_address); //Start I2C and answer calls using address from EEPROM
 
   //The connections to the interrupts are severed when a Wire.begin occurs. So re-declare them.

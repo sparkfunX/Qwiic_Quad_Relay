@@ -5092,8 +5092,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="PROD_ID" value="COMP-09533" x="10.16" y="19.05" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SF_SKU" value="COM-00100" x="10.16" y="19.05" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="R1" library="SparkFun-Resistors" package="0603" value="100" x="4.953" y="28.194">
-<attribute name="PROD_ID" value="RES-07863" x="4.953" y="28.194" size="1.778" layer="27" display="off"/>
+<element name="R1" library="SparkFun-Resistors" package="0603" value="10" x="4.953" y="28.194">
+<attribute name="PROD_ID" value="RES-09834" x="4.953" y="28.194" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R4" library="SparkFun-Resistors" package="0603" value="220" x="19.05" y="26.67">
 <attribute name="PROD_ID" value="RES-07861" x="19.05" y="26.67" size="1.778" layer="27" display="off"/>
@@ -5180,14 +5180,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="D6" library="SparkFun-DiscreteSemi" package="SOD-323" value="1A/23V/620mV" x="24.13" y="26.67">
 <attribute name="PROD_ID" value="DIO-11623" x="24.13" y="26.67" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R12" library="SparkFun-Resistors" package="0603" value="100" x="24.13" y="28.194">
-<attribute name="PROD_ID" value="RES-07863" x="24.13" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<element name="R12" library="SparkFun-Resistors" package="0603" value="10" x="24.13" y="28.194">
+<attribute name="PROD_ID" value="RES-09834" x="24.13" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R13" library="SparkFun-Resistors" package="0603" value="100" x="44.45" y="28.194">
-<attribute name="PROD_ID" value="RES-07863" x="44.45" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<element name="R13" library="SparkFun-Resistors" package="0603" value="10" x="44.45" y="28.194">
+<attribute name="PROD_ID" value="RES-09834" x="44.45" y="28.194" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
-<element name="R14" library="SparkFun-Resistors" package="0603" value="100" x="64.77" y="28.321">
-<attribute name="PROD_ID" value="RES-07863" x="64.77" y="28.321" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
+<element name="R14" library="SparkFun-Resistors" package="0603" value="10" x="64.77" y="28.321">
+<attribute name="PROD_ID" value="RES-09834" x="64.77" y="28.321" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
 <element name="D7" library="SparkFun-LED" package="LED-0603" value="BLUE" x="35.814" y="29.21" rot="R270">
 <attribute name="PROD_ID" value="DIO-08575" x="35.814" y="29.21" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>

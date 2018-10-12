@@ -34,6 +34,9 @@
 //#define TURN_ALL_ON  0xB
 //#define TURN_ALL_OFF 0xA
 
+// This command will toggle all of the relays on the board.
+//#define TOGGLE_ALL 0xC
+
 // Here are the commands to check on the 'status' of the relay
 // i.e. whether the relay is on or off.
 #define RELAY_ONE_STATUS 0x05

@@ -1,0 +1,4 @@
+EXTENDED = 0xFF (valid)
+HIGH = 0xD7 (modified)
+LOW = 0xE2 (modified)
+LOCK = NONE

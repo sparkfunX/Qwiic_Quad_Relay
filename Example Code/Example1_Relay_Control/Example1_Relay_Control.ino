@@ -28,6 +28,9 @@
 #define TURN_ALL_ON  0xB 
 #define TURN_ALL_OFF 0xA
 
+//Here is the command to toggle every relay.
+#define TOGGLE_ALL 0xC 
+
 // Here are the commands to check on the 'status' of the relay i.e. whether the
 // relay is on or off.
 #define RELAY_ONE_STATUS 0x05
@@ -79,16 +82,16 @@ void loop()
 		delay(400);
   }
 
-	//button three, relay three!
+	//button three, toggle every relay: on -> off and off -> on.
   if(digitalRead(red_btn) == LOW){
     Serial.println("Red Button");
     Wire.beginTransmission(RELAY_ADDR);
-    Wire.write(TURN_ALL_ON);
+    Wire.write(TOGGLE_ALL);
     Wire.endTransmission();
 		delay(400);
   }
 
-	//button four, relay four!
+	//button four, turn off all the relays!
   if(digitalRead(green_btn) == LOW){
     Serial.println("Green Button");
     Wire.beginTransmission(RELAY_ADDR);
@@ -105,15 +108,16 @@ void get_relays_status(){
   Wire.write(RELAY_ONE_STATUS); 
   Wire.endTransmission();
   //  We want the states of all the relays so we're requesting four bytes, i.e.
-  //  four relays. If you request 2 bytes, it will give you two relays! 
+  //  four relays. If you request 2 bytes, it will give you the state of two relays! 
   Wire.requestFrom(RELAY_ADDR, 4); 
-
 
   // Print it out, 0 == OFF and 15 == ON.  
   while(Wire.available()){
-    Serial.print("Relay"); 
-    Serial.print(" i:"); 
+    Serial.print("Relay "); 
+    Serial.print(i); 
+    Serial.print(": "); 
     Serial.println(Wire.read());
+    i++;
   }
 
 }
