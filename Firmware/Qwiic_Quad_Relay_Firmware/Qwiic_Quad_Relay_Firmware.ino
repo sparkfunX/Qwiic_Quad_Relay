@@ -22,7 +22,8 @@
 #include <EEPROM.h>
 
 #define LOCATION_I2C_ADDRESS 0x01 //Location in EEPROM where the I2C address is stored
-#define I2C_ADDRESS_DEFAULT 109 //0x6D Only one default address
+#define I2C_ADDRESS_DEFAULT 109 //0x6D Default address
+#define I2C_ADDRESS_JUMPER 108 //0x6C Address if address jumper is closed
 
 #define COMMAND_CHANGE_ADDRESS 0xC7
 
@@ -72,7 +73,6 @@ void setup(void)
   pinMode(relayCtrl4, OUTPUT);
 
   readSystemSettings(); //Load all system settings from EEPROM
-
   startI2C(); //Determine the I2C address we should be using and begin listening on I2C bus
 }
 
@@ -239,8 +239,10 @@ void startI2C()
 {
   Wire.end(); //Before we can change addresses we need to stop
   
-  if(digitalRead(addrPin) == HIGH) //Default is HIGH because the pin is not broken out
+  if(digitalRead(addrPin) == HIGH) //Default HIGH
     Wire.begin(setting_i2c_address); //Start I2C and answer calls using address from EEPROM
+  else
+    Wire.begin(I2C_ADDRESS_JUMPER);//Closed jumper is LOW
 
   //The connections to the interrupts are severed when a Wire.begin occurs. So re-declare them.
   Wire.onReceive(receiveEvent);
